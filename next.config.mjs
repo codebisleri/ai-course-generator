@@ -1,0 +1,45 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Enable react strict mode for development
+  reactStrictMode: true,
+  
+  // Enable environment variable optimization
+  env: {
+    NEXT_PUBLIC_GEMINI_API_KEY: process.env.NEXT_PUBLIC_GEMINI_API_KEY,
+    NEXT_PUBLIC_PERPLEXITY_API_KEY: process.env.NEXT_PUBLIC_PERPLEXITY_API_KEY,
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+    DATABASE_URL: process.env.DATABASE_URL,
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
+    CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_URL,
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_URL,
+    NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL,
+    NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL: process.env.NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL,
+    NEXT_PUBLIC_HOST_NAME: process.env.NEXT_PUBLIC_HOST_NAME,
+    ADMIN_USERS: process.env.ADMIN_USERS,
+    NEXT_PUBLIC_FIREBASE_API_KEY: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    NEXT_PUBLIC_FIREBASE_APP_ID: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+    ELEVENLABS_API_KEY: process.env.ELEVENLABS_API_KEY,
+    PEXELS_API_KEY: process.env.PEXELS_API_KEY,
+    YOUTUBE_CLIENT_ID: process.env.YOUTUBE_CLIENT_ID,
+    YOUTUBE_CLIENT_SECRET: process.env.YOUTUBE_CLIENT_SECRET,
+    YOUTUBE_REDIRECT_URI: process.env.YOUTUBE_REDIRECT_URI,
+  },
+  
+  // Enable image optimization
+  images: {
+    domains: ['images.clerk.dev', 'localhost', 'image.pollinations.ai'],
+  },
+  
+  // Configure for Turbopack compatibility
+  turbopack: {
+    // Remove invalid resolve key
+  }
+};
+
+export default nextConfig;
